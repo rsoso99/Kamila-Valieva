@@ -1,0 +1,57 @@
+.kami-gross {
+  font-family: arial;
+  font-size:30px;
+  border: 10px solid rgb(119, 24, 162);
+  border-radius: 100px;
+  width: 125px;
+  padding: 20px;
+  text-align: center;
+  color: rgb(151, 6, 199);
+  background-color: rgba(200, 0, 255, 0.175); 
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+    /*2px → horizontaler Versatz
+    2px → vertikaler Versatz
+    1px → Weichheit / Unschärfe*/
+}  
+
+.best-skater {
+  font-family: arial;
+  font-size: 15px;
+}
+
+.my-button {
+  background-color: rgba(220, 0, 220, 0.439);
+  color: black;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+      /* maus wird zur hand*/
+  transition: background-color 2s, transform 0.3s, box-shadow 0.3s;
+      /* bei transform sag ich dem Browser: „Wenn sich diese Eigenschaften ändern, dann mach eine 0.3s Animation daraus“. */
+}
+
+.my-button:hover {
+  background-color: rgba(255, 0, 230, 0.565);
+  box-shadow: 0 4px 4px;
+  transform: scale(1.2);
+}
+
+.my-button {
+  will-change: transform;
+  opacity: 0; /*Startzustand*/
+  animation: slideRight 1s ease-out forwards; 
+    /*eigentlich springt ein Element nach der Animation zurück in seinen ursprünglichen Zustand ---> 
+    forwards sorgt dafür, dass das Element nach der Animation im Endzustand bleibt*/
+}
+
+.my-button {
+  opacity: 0; /*Startzustand*/
+  animation: slideRight 1s ease-out forwards; 
+    /*eigentlich springt ein Element nach der Animation zurück in seinen ursprünglichen Zustand --->
+    forwards sorgt dafür, dass das Element nach der Animation im Endzustand bleibt*/
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(-200px); opcaity: 0;} /*0%: Startzustand --> und 200px nach links verschoben*/
+  100% { transform: translateX(0); opacity: 1;} /*translateX: heisst verschieben entlang der X Achse*/
+}
